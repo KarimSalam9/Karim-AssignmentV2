@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <title>Document</title>
+  <style>
+    .HeaderContainer {
+        position: absolute;
+        width: 100%;
+        height: 30%;
+    }
+    .NavBar {
+        position: relative;
+        height: 15%;
+        border-bottom: 1px solid black;
+        background-color: black;
+    }
+    .HomeImg {
+        z-index: 999;
+        left: 0.6%;
+        position: absolute;
+        top: 20%;
+    }
+    .Logo {
+        background-color: #009688;
+        position: absolute;
+        left: 0%;
+        height: 100%;
+        width: 4.5%;
+        color: white;
+        font-size: 0.8em;
+        text-align: right;
+        border: 1px solid #009688;
+    }
+    .Team {
+        position: absolute;
+        left: 4.5%;
+        height: 100%;
+        width: 3.5%;
+        background-color: black;
+        color: white;
+        border: 0;
+    }
+    .Work {
+        position: absolute;
+        left: 8%;
+        height: 100%;
+        width: 3.5%;
+        background-color: black;
+        color: white;
+        border: 0;
+    }
+    .Price {
+        position: absolute;
+        left: 11.5%;
+        height: 100%;
+        width: 3.5%;
+        background-color: black;
+        color: white;
+        border: 0;
+    }
+    .Contact {
+        position: absolute;
+        left: 15%;
+        height: 100%;
+        width: 3.5%;
+        background-color: black;
+        color: white;
+        border: 0;
+    }
+    .DropDown {
+      position: absolute;
+      left: 19.5%;
+      height: 100%;
+      width: 5%;
+      background-color: transparent;
+      color: white;
+      border: 0;
+      margin: 0;
+      padding: 0;
+        
+    }
+    .SearchImg {
+        position: absolute;
+        z-index: 999;
+        right: 0.8%;
+        top: 30%
+    }
+    .DesertImg {
+        position: absolute;
+        left: 0%;
+        height: 85%;
+        width: 100%;
+    }
+    .TeamContainer{
+      position: absolute;
+      width: 100%;
+      height: 40%;
+      top: 30%;
+  }
+  .TeamTitle{
+      position: absolute;
+      top: 8%;
+      left: 46.35%;
+      text-align: center;
+      font-size: 2em;
+      font-weight: 600;
+  }
+  .TeamIntroduction{
+      position: absolute;
+      top: 25%;
+      left: 44.1%;
+      font-size: 1em;
+      font-weight: 500;
+  }
+  .ImagesContainer{
+      position: absolute;
+      top: 28%;
+      height: 60%;
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      flex-direction: row;
+      align-items: center;
+  }
+  .IslamImg{
+      border-radius: 50%;
+      width: 128px;
+      height: 128px;
+      border: 1px solid;
+  }
+  .TayseerImg{
+      border-radius: 50%;
+      width: 128px;
+      height: 128px;
+      border: 1px solid;
+  }
+  .EmanImg{
+      border-radius: 50%;
+      width: 128px;
+      height: 128px;
+      border: 1px solid;
+  }
+  .ReemImg{
+      border-radius: 50%;
+      width: 128px;
+      height: 128px;
+      border: 1px solid;
+  }.NamesPositionsContainer{
+      position: absolute;
+      top: 76%;
+      height: 25%;
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      flex-direction: row;
+      align-items: center;
+  }
+  .IslamBio{
+      top: -28%;
+      left: 6.3%;
+      position: relative;
+      font-size: 1.2em;
+      font-weight: 500;
+  }
+  .TayseerBio{
+      top: -28%;
+      left: 4.4%;
+      position: relative;
+      font-size: 1.2em;
+      font-weight: 500;
+  }
+  .EmanBio{
+      top: -28%;
+      left: 3%;
+      position: relative;
+      font-size: 1.2em;
+      font-weight: 500;
+  }
+  .ReemBio{
+      top: -28%;
+      left: 2%;
+      position: relative;
+      font-size: 1.2em;
+      font-weight: 500;
+  }
+  .IslamOccupation{
+      position: absolute;
+      left: 16%;
+    top: 50%;
+      font-size: 0.8em;
+  }
+  .TayseerOccupation{
+      position: absolute;
+      left: 38.3%;
+    top: 50%;
+      font-size: 0.8em;
+  }
+  .EmanOccupation{
+      position: absolute;
+      left: 59.2%;
+    top: 50%;
+      font-size: 0.8em;
+  }
+  .ReemOccupation{
+      position: absolute;
+      left: 81.2%;
+    top: 50%;
+      font-size: 0.8em;
+  }
+  .WorkContainer{
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    top: 70%;
+    background-color: #333333;
+}
+.WorkInformation{
+    position: absolute;
+    left:0%;
+    width: 20%;
+    height: 100%;
+}
+.CustomersContainer{
+    position: absolute;
+    left: 30%;
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.card{
+    height: 85%;
+    width: 20%;
+    position: relative;
+    top: 10%;
+    background-color: white;
+    margin-right: 0.6%;
+}
+.FooterContainer{
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  top: 120%
+}
+.ContactSection{
+  position: absolute;
+  width: 100%;
+  height: 70%;
+  left: 0%;
+  background-color: #F0F0F0;
+}
+.SocialMedia{
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  top: 70%;
+  left: 0%;
+  background-color: black;
+}
+.ContactUs{
+  position: absolute;
+  width: 30%;
+  height: 100%;
+  left: 0%;
+}
+.LocationIcon{
+  position: absolute;
+  left: 2%;
+  top: 60%;
+}
+.PhoneIcon{
+  position: absolute;
+  left: 2%;
+  top: 70%;
+}
+.MailIcon{
+  position: absolute;
+  left: 2%;
+  top: 80%;
+}
+.FormContainer{
+  position: absolute;
+  width: 70%;
+  left: 40%;
+  height: 100%;
+}
+
+input[type=text], select {
+  width: 90%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid black;
+  margin-top: 2%;
+}
+
+input[type=submit] {
+  width: 10%;
+  background-color: black;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  right: 6%;
+  top: 75%;
+}
+input[type=checkbox] {
+  position: absolute;
+  top: 80.5%;
+  left: 4%;
+}
+.Form{
+  position: absolute;
+  height: 90%;
+  width: 85%;
+  top: 4%;
+  left: 4%;
+  background-color: white;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.SocialMediaIcons{
+  position: absolute;
+  top: 50%;
+  width: 15%;
+  left: 43%;
+  display: flex;
+  flex-direction: row;
+}
+
+.WorkContainer{
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  top: 70%;
+  background-color: #333333;
+}
+.WorkInformation{
+  position: absolute;
+  left:0%;
+  width: 20%;
+  height: 100%;
+}
+.CustomersContainer{
+  position: absolute;
+  left: 30%;
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.card{
+  height: 85%;
+  width: 20%;
+  position: relative;
+  top: 10%;
+  background-color: white;
+  margin-right: 0.6%;
+}
+.FooterContainer{
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  top: 120%
+}
+.ContactSection{
+  position: absolute;
+  width: 100%;
+  height: 70%;
+  left: 0%;
+  background-color: #F0F0F0;
+}
+.SocialMedia{
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  top: 70%;
+  left: 0%;
+  background-color: black;
+}
+.ContactUs{
+  position: absolute;
+  width: 30%;
+  height: 100%;
+  left: 0%;
+}
+.LocationIcon{
+  position: absolute;
+  left: 2%;
+  top: 60%;
+}
+.PhoneIcon{
+  position: absolute;
+  left: 2%;
+  top: 70%;
+}
+.MailIcon{
+  position: absolute;
+  left: 2%;
+  top: 80%;
+}
+.FormContainer{
+  position: absolute;
+  width: 70%;
+  left: 40%;
+  height: 100%;
+}
+
+input[type=text], select {
+  width: 90%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid black;
+  margin-top: 2%;
+}
+
+input[type=submit] {
+  width: 10%;
+  background-color: black;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  right: 6%;
+  top: 75%;
+}
+input[type=checkbox] {
+  position: absolute;
+  top: 80.5%;
+  left: 4%;
+}
+.Form{
+  position: absolute;
+  height: 90%;
+  width: 85%;
+  top: 4%;
+  left: 4%;
+  background-color: white;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.SocialMediaIcons{
+  position: absolute;
+  top: 50%;
+  width: 15%;
+  left: 43%;
+  display: flex;
+  flex-direction: row;
+}
+
+
+</style>
+</head>
+
+<body style="margin: 0;">
+  <div class="HeaderContainer">
+    <div class="NavBar">
+      <img class="HomeImg" src="/public/home.ico">
+      <button class="Logo">Logo</button>
+      <button class="Team">Team</button>
+      <button class="Work">Work</button>
+      <button class="Price">Price</button>
+      <button class="Contact">Contact</button>
+      <select class="DropDown" id="HeaderDropdown">
+        <option value="DropDown">DropDown</option>
+      </select>
+      <img class="SearchImg" src="/public/search.ico">
+    </div>
+    <img class="DesertImg" src="/public/desert.jpg">
+  </div>
+  <div class="TeamContainer">
+    <h2 class="TeamTitle">Our Team</h2>
+    <p class="TeamIntroduction">Meet the team - our office rats: </p>
+
+    <div class="ImagesContainer">
+      <img class="IslamImg" src="/public/employeeM.jpg">
+      <img class="TayseerImg" src="/public/employeeM.jpg">
+      <img class="EmanImg" src="/public/employeeF.jpg">
+      <img class="ReemImg" src="/public/employeeF.jpg">
+    </div>
+    <div class="NamesPositionsContainer">
+      <p class="IslamBio">
+        Islam AlZatary<br>
+        <p class="IslamOccupation">Web Designer</p>
+      </p>
+      <p class="TayseerBio">
+        Tayseer Emam<br>
+        <p class="TayseerOccupation">Support</p>
+      </p>
+      <p class="EmanBio">
+        Eman Subhi<br>
+        <p class="EmanOccupation">Boss Man</p>
+      </p>
+      <p class="ReemBio">
+        Reem Yakoub<br>
+        <p class="ReemOccupation">Fixer</p>
+      </p>
+    </div>
+  </div>
+  <div class="WorkContainer">
+    <div class="WorkInformation">
+      <h2 style="position: absolute; top: 10%; color: white;">
+        Our Work<br>
+        <p style="font-size: 0.6em; font-weight: 100;">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+            standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+            a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+            Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+            of Lorem Ipsum.
+        </p>
+    </h2>
+    </div>
+    <div class="CustomersContainer">
+        <div class="card">
+            <img src="/public/Mountain.jpg" style="width: 100%;">
+            <div class="container">
+                <h4><b>Customer 1</b></h4>
+                <p>Trade</p>
+                <p>Lorem Ipsum</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="/public/Mountain.jpg" style="width: 100%;">
+            <div class="container">
+                <h4><b>Customer 2</b></h4>
+                <p>Trade</p>
+                <p>Lorem Ipsum</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="/public/Mountain.jpg" style="width: 100%;">
+        <div class="container">
+          <h4>
+            <b>Customer 3</b>
+          </h4>
+          <p>Trade</p>
+          <p>Lorem Ipsum</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="FooterContainer">
+    <div class="ContactSection">
+        <div class="ContactUs">
+            <h3 style="position: absolute; color: black; top: 10%; left: 2%; border-bottom: 5px solid #009688;">Contact Us:</h3>
+            <br>
+            <p style="position: absolute; top: 30%; color: black; left: 2%; text-align: left;"><b>Address</b></p>
+            <br>
+            <p style="position: absolute; top: 40%; color: black; left: 2%; text-align: left;">Swing by for a cup of coffee, or whatever.</p>
+            <br>
+            <img class="LocationIcon" src="/public/location.png">
+            <p style="position: absolute; left: 5%; top: 54.5%; color: black;">Amman, Jordan</p>
+            <br>
+            <img class="PhoneIcon" src="/public/phone.png">
+            <p style="position: absolute; left: 5%; top: 64%; color: black;">+962 79 0000000</p>
+            <br>
+            <img class="MailIcon" src="/public/mail.png">
+            <p style="position: absolute; left: 5%; top: 74%; color: black;">test@test.com</p>
+        </div>
+        <div class="FormContainer">
+            <form class="Form" action="/action_page.php">
+                <input type="text" name="name" placeholder="Name">
+                <input type="text" name="email" placeholder="Email">
+                <input type="text" name="message" placeholder="Message">
+                <input type="checkbox" id="like" name="like" value="Like">
+                <label for="like" style="position: absolute; top: 80%; left: 6%; color: black;">I Like it!</label>
+                <br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+    <div class="SocialMedia">
+        <h2 style="position: absolute; top: 5%; left: 48%; color: white; font-weight: normal;">Follow Us</h2>
+        <div class="SocialMediaIcons">
+            <img class="Facebook" style="margin-right: 1%;" src="/public/facebook.png">
+            <img class="Twitter" style="margin-right: 1%;" src="/public/twitter.png">
+            <img class="Gmail" style="margin-right: 1%;" src="/public/google-plus.png">
+            <img class="Instagram" style="margin-right: 1%;" src="/public/instagram.png">
+            <img class="LinkedIn" style="margin-right: 1%;" src="/public/linkedIn.png">
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
